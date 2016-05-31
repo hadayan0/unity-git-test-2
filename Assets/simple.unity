@@ -101,7 +101,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!23 &746959251
 MeshRenderer:
@@ -156,7 +156,7 @@ Transform:
   m_GameObject: {fileID: 746959250}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 1, z: 5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -188,8 +188,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2dfdb050a7dafd47b1e974703d963c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotate_spd: 1
-  appro_spd: 1
 --- !u!4 &755922867
 Transform:
   m_ObjectHideFlags: 0
@@ -478,7 +476,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 962511865}
   rotate_spd: 100
-  appro_spd: 100
+  vertical_spd: 100
+  approach_spd: 10
+  vertical_max: 75
+  vertical_min: 5
+  approach_max: 20
+  approach_min: 2
 --- !u!143 &1975811607
 CharacterController:
   m_ObjectHideFlags: 0
@@ -487,7 +490,7 @@ CharacterController:
   m_GameObject: {fileID: 1975811600}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Height: 2
   m_Radius: 0.5
